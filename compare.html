@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <<link rel="stylesheet" href="C:\Users\deuts\OneDrive\Documents\GitHub\11.-Web\Deutsch web homework\style.css">
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="#">Weather Project Navbar</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#"Navigation Menu id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Plots
+      </a>
+      <div class="dropdown-menu" aria-labelledby="Navigation Menu">
+        <a class="dropdown-item" href="index.html">Home/Landing Page</a>
+        <a class="dropdown-item" href="temp.html">Temperature</a>
+        <a class="dropdown-item" href="humid.html">Humidity</a>
+        <a class="dropdown-item" href="cloud.html">Cloudiness</a>
+        <a class="dropdown-item" href="wind.html">Wind</a>
+        <a class="dropdown-item" href="compare.html">Weather/Hemisphere Comparison</a>
+        <a class="dropdown-item" href="data.html">Data Page</a>
+       </div>
+    </li>
+    </ul>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</div>
+</nav>
+  </head>
+<body>
+    <header class="header">
+        <h1>Northern and Southern Hemisphere Comparisons Page</h1>
+      </header>
+      <main>
+        <section class="posts">
+          <article class="post">
+            <h3>Plotting Weather Data</h3>
+            <p>On all of the scatterplots, there are fewer cities appearing in the Southern Hemisphere.
+
+                That does not indicate smaller correlation.  It indicates a limited number of cities in the Southern Hemisphere.
+
+                The Southern Hemisphere has far fewer cities than the Northern Hemisphere for two primary reasons: more Ocean (less land) and fewer people than in the Northern Hemisphere.
+                The Southern Hemisphere, the half of Earth south of the Equator, contains 81% water (20% more than the Northern Hemisphere) from four oceans, including the Indian, South Atlantic, Southern, and South Pacific). 
+                The population of the Southern Hemisphere is 800 million, only 10-12% of the total world population of 7.3 billion. 
+                The continent of Antarctica contains the geographic South Pole and is entirely in the Southern Hemisphere.
+                Because the Southern Hemisphere has significantly more ocean and less land, climates tend to be milder than similar latitudes in the Northern Hemisphere. This is because water heats up and cools more slowly than land.
+            </p> 
+            <div class="box box-single">
+                <section id="intro">
+                        <h1>Comparison: Latitude vs. X</h1>
+                        <hr>
+                        <section id="summary">
+                                <p>Click any plot for further analysis.</p>
+                        </section>
+                </section>
+                <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                              <h3>vs. Max Temperature</h3>
+                            <figure>
+                                  <a href="temp.html">
+                                      <img id="landing-viz" src="C:\Users\deuts\OneDrive\Documents\GitHub\11.-Web\Deutsch web homework\PNGs\Temp and Lat.PNG" alt="Latitude vs. Temperature"></a>
+                              </figure>
+                          </div>
+                      
+                    <div class="col-xs-12 col-md-6">
+                            <h3>vs. Humidity</h3>
+                            <figure>
+                                <a href="humid.html">
+                                    <img id="landing-viz" src="C:\Users\deuts\OneDrive\Documents\GitHub\11.-Web\Deutsch web homework\PNGs\Lat and humid.PNG" alt="Latitude vs. Humidity"></a>
+                            </figure>
+                        </div>
+  
+                    <div class="col-xs-12 col-md-6">
+                        <h3>vs. Cloudiness</h3>
+                        <figure>
+                            <a href="cloud.html">
+                                <img id="landing-viz" src="C:\Users\deuts\OneDrive\Documents\GitHub\11.-Web\Deutsch web homework\PNGs\Cloud and lat.PNG" alt="Latitude vs. Cloudiness"></a>
+                        </figure>
+                    </div>
+  
+                    <div class="col-xs-12 col-md-6">
+                        <h3>vs. Wind Speed</h3>
+                        <figure>
+                                <a href="wind.html">
+                                    <img id="landing-viz" src="C:\Users\deuts\OneDrive\Documents\GitHub\11.-Web\Deutsch web homework\PNGs\Wind and Lat.PNG" alt="Latitude vs. Wind Speed"></a>
+                        </figure>
+                    </div>
+          </div>
+        
+    <script src="https://code.jquery.com/jquery-3.2.1.js"integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script> 
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+  </html>     
+    
+
+	
