@@ -1,5 +1,5 @@
 function buildMetadata(sample) {
-    d3.json("samples.json").then((data) => {
+    d3.json("https://github.com/DeltaDeutsch/deltadeutsch.github.io/blob/32ed7f5d74503e44d4b40f3d41014b3ac7458167/samples.json").then((data) => {
       var metadata= data.metadata;
       var resultsarray= metadata.filter(sampleobject => sampleobject.id == sample);
       var result= resultsarray[0]
@@ -16,7 +16,7 @@ function buildMetadata(sample) {
 function buildCharts(sample) {
 
   // Fetch plots sample data using `d3.json`
-  d3.json("samples.json").then((data) => {
+  d3.json("https://github.com/DeltaDeutsch/deltadeutsch.github.io/blob/32ed7f5d74503e44d4b40f3d41014b3ac7458167/samples.json").then((data) => {
     var samples= data.samples;
     var resultsarray= samples.filter(sampleobject => sampleobject.id == sample);
     var result= resultsarray[0]
