@@ -1,112 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <<link rel="stylesheet" href="style.css">
-    <title>Web Design Challenge: Weather Insights from Steve Deutsch!</title>
-  </head>
-  <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Weather Project Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flask Plotlyjs Example</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#"Navigation Menu id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Plots
-        </a>
-        <div class="dropdown-menu" aria-labelledby="Navigation Menu">
-          <a class="dropdown-item" href="index.html">Home/Landing Page</a>
-          <a class="dropdown-item" href="temp.html">Temperature</a>
-          <a class="dropdown-item" href="humid.html">Humidity</a>
-          <a class="dropdown-item" href="cloud.html">Cloudiness</a>
-          <a class="dropdown-item" href="wind.html">Wind</a>
-          <a class="dropdown-item" href="compare.html">Weather/Hemisphere Comparison</a>
-          <a class="dropdown-item" href="data.html">Data Page</a>
-         </div>
-      </li>
-      </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-<header class="header">
-  <h1>Web Design Challenge: Weather Insights from Steve Deutsch!</h1>
-</header>
-<main>
-  <section class="posts">
-    <article class="post">
-      <h3>Plotting Weather Data</h3>
-      <p><h2>The purpose of the project was to analyze how weather changes as you get closer to the equator. 
+<body>
 
-        To accomplish this analysis I pulled the data from the OpenWeatherMap API to assemble a dataset of over 500 cities.
-
-        I then used Matplotlib to plot various aspects of the weather such as temperature, cloudiness, wind speed, and humidity vs. latitude.</h2>
-      </p>
-    </article>
-    </section>
-</main>
-</div>
-<div class="col-md-4">
-  <div class="box box-right">
-      <h2>Visualizations</h2>
-      <hr>
-
-
-      <div class="row">
-          <div class="col-xs-6 col-sm-3 col-md-6">
-              <figure>
-                  <a href="temp.html">
-                      <img id="landing-viz" src="PNGs\Temp and Lat.PNG" alt="Latitude vs. Temperature">
-                  </a>
-              </figure>
-          </div>
-
-          <div class="col-xs-6 col-sm-3 col-md-6">
-              <figure>
-                  <a href="humid.html">
-                      <img id="landing-viz" src="PNGs\Lat and humid.PNG" alt="Latitude vs. Humidity">
-                  </a>
-              </figure>
-          </div>
-
-          <div class="col-xs-6 col-sm-3 col-md-6">
-              <figure>
-                  <a href="cloud.html">
-                      <img id="landing-viz" src="PNGs\Cloud and lat.PNG" alt="Latitude vs. Cloudiness">
-                  </a>
-              </figure>
-          </div>
-
-          <div class="col-xs-6 col-sm-3 col-md-6">
-              <figure>
-                  <a href="wind.html">
-                      <img id="landing-viz" src="PNGs\Wind and Lat.PNG" alt="Latitude vs. Wind Speed">
-                  </a>
-              </figure>
-          </div>
-
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Explore the information using the interactive charts</p>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>SELECT Sample:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Sample MetaData</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
   </div>
-</div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="bubble"></div>
+    </div>
+  </div>
 
-</div>
-</div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+  <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- <script src="{{ url_for('static', filename='js/bonus.js') }}"></script> -->
+  <script src="bonus.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
 </html>
