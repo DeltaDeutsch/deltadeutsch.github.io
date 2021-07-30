@@ -76,7 +76,7 @@ function init() {
   var selector = d3.select("#selDataset");
 
   // Use sample names to populate select options
-  d3.json("samples.json").then((data) => {
+  d3.json("https://github.com/DeltaDeutsch/deltadeutsch.github.io/blob/32ed7f5d74503e44d4b40f3d41014b3ac7458167/samples.json").then((data) => {
     var sampleNames = data.names;
     sampleNames.forEach((sample) => {
       selector
