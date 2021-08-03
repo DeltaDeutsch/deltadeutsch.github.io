@@ -9,7 +9,8 @@ function buildMetadata(sample) {
         PANEL.append("h6").text(`${key}: ${value}`);
       });
 
-      // BOnus 
+      // BONUS: Build the Gauge Chart
+    buildGauge(result.wfreq); 
        
     });
   }
